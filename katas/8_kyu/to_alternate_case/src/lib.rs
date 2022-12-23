@@ -48,4 +48,9 @@ mod tests {
     fn it_should_not_alter_numbers() {
         assert_eq!(to_alternating_case("12345"), "12345");
     }
+
+    #[test]
+    fn it_should_alter_mixed_chars_not_numbers() {
+        assert_eq!(to_alternating_case("12ab34CD56ef"), "12AB34cd56EF");
+    }
 }
