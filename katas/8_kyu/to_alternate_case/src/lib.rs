@@ -1,12 +1,18 @@
 #[allow(dead_code)]
 fn to_alternating_case(s: &str) -> String {
-    let mut original_string = String::new();
+    let mut original_string: String = String::new();
     original_string.push_str(s);
-    if original_string.chars().nth(0).unwrap().is_uppercase() {
-        original_string.to_lowercase()
-    } else {
-        original_string.to_uppercase()
+
+    let mut altered_string: String = String::new();
+
+    for character in original_string.chars() {
+        if character.is_uppercase() {
+            altered_string.push_str(&character.to_lowercase().to_string());
+        } else {
+            altered_string.push_str(&character.to_uppercase().to_string());
+        }
     }
+    altered_string
 }
 
 #[cfg(test)]
