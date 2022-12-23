@@ -1,6 +1,10 @@
 #[allow(dead_code)]
 fn plural(n: f64) -> bool {
-    false
+    if n == 1.0 {
+        false
+    } else {
+        true
+    }
 }
 
 #[cfg(test)]
