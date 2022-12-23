@@ -43,4 +43,9 @@ mod tests {
     fn it_should_alter_variable_cased_chars() {
         assert_eq!(to_alternating_case("aAa"), "AaA");
     }
+
+    #[test]
+    fn it_should_not_alter_numbers() {
+        assert_eq!(to_alternating_case("12345"), "12345");
+    }
 }
