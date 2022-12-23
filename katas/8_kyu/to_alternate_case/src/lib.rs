@@ -27,4 +27,9 @@ mod tests {
     fn it_should_change_single_char_from_upper_to_lower() {
         assert_eq!(to_alternating_case("A"), "a");
     }
+
+    #[test]
+    fn it_should_change_multiple_chars_from_lower_to_upper() {
+        assert_eq!(to_alternating_case("aaa"), "AAA");
+    }
 }
