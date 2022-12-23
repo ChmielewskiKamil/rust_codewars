@@ -20,4 +20,9 @@ mod tests {
     fn it_returns_true_for_two() {
         assert_eq!(plural(2.0), true);
     }
+
+    #[test]
+    fn it_returns_true_for_zero() {
+        assert_eq!(plural(0), true);
+    }
 }
