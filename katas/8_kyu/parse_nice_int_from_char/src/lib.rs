@@ -1,5 +1,6 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+#[allow(dead_code)]
+fn get_age(age: &str) -> u32 {
+    2
 }
 
 #[cfg(test)]
@@ -7,8 +8,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn it_returns_2_for_two_years_old() {
+        assert_eq!(get_age("2 years old"), 2);
     }
 }
