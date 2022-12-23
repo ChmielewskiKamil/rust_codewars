@@ -19,12 +19,12 @@ mod tests {
     }
 
     #[test]
-    fn it_should_change_casing_from_lower_to_upper() {
+    fn it_should_change_single_char_from_lower_to_upper() {
         assert_eq!(to_alternating_case("a"), "A");
     }
 
     #[test]
-    fn it_should_change_casing_from_upper_to_lower() {
+    fn it_should_change_single_char_from_upper_to_lower() {
         assert_eq!(to_alternating_case("A"), "a");
     }
 }
