@@ -2,7 +2,11 @@
 fn to_alternating_case(s: &str) -> String {
     let mut original_string = String::new();
     original_string.push_str(s);
-    original_string.to_uppercase()
+    if original_string.chars().nth(0).unwrap().is_uppercase() {
+        original_string.to_lowercase()
+    } else {
+        original_string.to_uppercase()
+    }
 }
 
 #[cfg(test)]
