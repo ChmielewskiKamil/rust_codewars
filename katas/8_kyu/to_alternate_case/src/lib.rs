@@ -1,5 +1,8 @@
+#[allow(dead_code)]
 fn to_alternating_case(s: &str) -> String {
-    String::new()
+    let mut original_string = String::new();
+    original_string.push_str(s);
+    original_string.to_uppercase()
 }
 
 #[cfg(test)]
@@ -7,9 +10,10 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
+    fn it_always_passes() {
         assert!(true);
     }
+
     #[test]
     fn it_should_change_casing_from_lower_to_upper() {
         assert_eq!(to_alternating_case("a"), "A");
