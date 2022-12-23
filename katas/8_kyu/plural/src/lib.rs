@@ -1,5 +1,10 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+#[allow(dead_code)]
+fn plural(n: f64) -> bool {
+    if n == 1.0 {
+        false
+    } else {
+        true
+    }
 }
 
 #[cfg(test)]
@@ -7,8 +12,12 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn it_returns_false_for_one() {
+        assert_eq!(plural(1.0), false);
+    }
+
+    #[test]
+    fn it_returns_true_for_two() {
+        assert_eq!(plural(2.0), true);
     }
 }
