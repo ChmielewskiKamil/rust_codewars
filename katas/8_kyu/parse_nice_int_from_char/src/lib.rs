@@ -1,6 +1,6 @@
 #[allow(dead_code)]
 fn get_age(age: &str) -> u32 {
-    let numerical_age: u32 = age.chars().nth(0).unwrap().to_digit(10).unwrap();
+    let numerical_age: u32 = age[..1].parse().unwrap();
     numerical_age
 }
 
