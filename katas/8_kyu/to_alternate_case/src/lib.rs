@@ -32,4 +32,9 @@ mod tests {
     fn it_should_change_multiple_chars_from_lower_to_upper() {
         assert_eq!(to_alternating_case("aaa"), "AAA");
     }
+
+    #[test]
+    fn it_should_alter_variable_cased_chars() {
+        assert_eq!(to_alternating_case("aAa"), "AaA");
+    }
 }
