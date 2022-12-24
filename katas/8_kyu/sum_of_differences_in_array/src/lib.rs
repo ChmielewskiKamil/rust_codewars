@@ -4,7 +4,7 @@ fn sum_of_differences(arr: &[i8]) -> Option<i8> {
     if arr.len() == 1 || arr.is_empty() {
         None
     } else {
-        Some(1)
+        Some(arr[0] - arr[1])
     }
 }
 
@@ -30,5 +30,10 @@ mod tests {
     #[test]
     fn it_returns_one_for_2_and_1() {
         assert_eq!(sum_of_differences(&[2, 1]), Some(1));
+    }
+
+    #[test]
+    fn it_returns_three_for_5_and_2() {
+        assert_eq!(sum_of_differences(&[5, 2]), Some(3));
     }
 }
