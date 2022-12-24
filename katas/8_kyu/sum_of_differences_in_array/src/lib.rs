@@ -43,4 +43,9 @@ mod tests {
     fn it_should_not_depend_on_the_order_of_elemetns() {
         assert_eq!(sum_of_differences(&[2, 5]), Some(3));
     }
+
+    #[test]
+    fn it_works_for_two_negative_numbers() {
+        assert_eq!(sum_of_differences(&[-2, -3]), Some(1));
+    }
 }
