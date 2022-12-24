@@ -23,6 +23,11 @@ mod tests {
     }
 
     #[test]
+    fn it_returns_none_for_empty_array() {
+        assert_eq!(sum_of_differences(&[]), None);
+    }
+
+    #[test]
     fn it_returns_one_for_2_and_1() {
         assert_eq!(sum_of_differences(&[2, 1]), Some(1));
     }
