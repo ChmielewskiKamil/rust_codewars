@@ -1,7 +1,7 @@
 #![allow(dead_code, unused_variables, unused_imports)]
 
 fn sum_of_differences(arr: &[i8]) -> Option<i8> {
-    if arr.len() == 1 {
+    if arr.len() == 1 || arr.is_empty() {
         None
     } else {
         Some(1)
