@@ -4,7 +4,9 @@ fn sum_of_differences(arr: &[i8]) -> Option<i8> {
     if arr.len() == 1 || arr.is_empty() {
         None
     } else {
-        Some(arr[0] - arr[1])
+        let mut sorted_array = arr.to_owned();
+        sorted_array.sort_by(|a, b| b.cmp(a));
+        Some(sorted_array[0] - sorted_array[1])
     }
 }
 
