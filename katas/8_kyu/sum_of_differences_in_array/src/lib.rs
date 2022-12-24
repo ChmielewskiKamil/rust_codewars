@@ -6,7 +6,12 @@ fn sum_of_differences(arr: &[i8]) -> Option<i8> {
     } else {
         let mut sorted_array = arr.to_owned();
         sorted_array.sort_by(|a, b| b.cmp(a));
-        Some(sorted_array[0] - sorted_array[1])
+
+        let mut sum = 0;
+        for i in 1..sorted_array.len() {
+            sum += sorted_array[i - 1] - sorted_array[i];
+        }
+        Some(sum)
     }
 }
 
@@ -47,5 +52,10 @@ mod tests {
     #[test]
     fn it_works_for_two_negative_numbers() {
         assert_eq!(sum_of_differences(&[-2, -3]), Some(1));
+    }
+
+    #[test]
+    fn it_works_for_three_positive_numbers() {
+        assert_eq!(sum_of_differences(&[1, 2, 3]), Some(2));
     }
 }
