@@ -14,7 +14,7 @@ mod tests {
     }
 
     #[test]
-    fn it_returns_zero_if_only_one_element() {
+    fn it_returns_none_if_only_one_element() {
         assert_eq!(sum_of_differences(&[1]), None);
     }
 }
