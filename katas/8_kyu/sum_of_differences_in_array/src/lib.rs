@@ -36,4 +36,9 @@ mod tests {
     fn it_returns_three_for_5_and_2() {
         assert_eq!(sum_of_differences(&[5, 2]), Some(3));
     }
+
+    #[test]
+    fn it_should_not_depend_on_the_order_of_elemetns() {
+        assert_eq!(sum_of_differences(&[2, 5]), Some(3));
+    }
 }
