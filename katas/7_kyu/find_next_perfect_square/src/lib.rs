@@ -1,5 +1,5 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
+fn find_next_square(sq: u64) -> Option<u64> {
+    todo!();
 }
 
 #[cfg(test)]
@@ -7,8 +7,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    fn it_always_passes() {
+        assert!(true);
     }
 }
