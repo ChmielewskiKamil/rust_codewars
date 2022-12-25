@@ -10,4 +10,9 @@ mod tests {
     fn it_always_passes() {
         assert!(true);
     }
+
+    #[test]
+    fn it_finds_4_for_2() {
+        assert_eq!(find_next_square(2), Some(4));
+    }
 }
