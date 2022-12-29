@@ -40,24 +40,4 @@ mod tests {
     fn it_returns_none_for_114() {
         assert_eq!(find_next_square(114), None);
     }
-
-    /* //////////////////////////////////////////
-                is_perfect tests
-       /////////////////////////////////////////
-    */
-
-    #[test]
-    fn it_knows_if_4_is_perfect() {
-        assert_eq!(is_perfect(4), true);
-    }
-
-    #[test]
-    fn it_knows_if_5_is_perfect() {
-        assert_eq!(is_perfect(5), false);
-    }
-
-    #[test]
-    fn it_knows_if_121_is_perfect() {
-        assert_eq!(is_perfect(121), true);
-    }
 }
