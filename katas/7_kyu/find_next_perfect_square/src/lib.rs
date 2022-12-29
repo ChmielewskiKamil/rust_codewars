@@ -39,8 +39,8 @@ mod tests {
     */
 
     #[test]
-    fn it_finds_4_for_2() {
-        assert_eq!(find_next_square(2), Some(4));
+    fn it_returns_none_for_2() {
+        assert_eq!(find_next_square(2), None);
     }
 
     #[test]
