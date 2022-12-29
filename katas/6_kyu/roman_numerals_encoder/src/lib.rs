@@ -6,7 +6,7 @@ fn num_as_roman(num: i32) -> String {
             num
         )
     } else {
-        "yayo".to_string()
+        "I".to_string()
     }
 }
 #[allow(non_snake_case)]
