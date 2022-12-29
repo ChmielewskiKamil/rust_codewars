@@ -1,4 +1,8 @@
 fn find_next_square(sq: u64) -> Option<u64> {
+    if !is_perfect(sq) {
+        return None;
+    }
+
     let mut square_to_test = sq + 1;
     loop {
         if is_perfect(square_to_test) {
@@ -46,7 +50,12 @@ mod tests {
 
     #[test]
     fn it_finds_676_for_625() {
-        assert_eq!(find_next_square(625), Some(676))
+        assert_eq!(find_next_square(625), Some(676));
+    }
+
+    #[test]
+    fn it_returns_none_for_114() {
+        assert_eq!(find_next_square(114), None);
     }
 
     /* //////////////////////////////////////////
