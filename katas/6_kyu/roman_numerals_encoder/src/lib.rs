@@ -1,6 +1,13 @@
 /// Converts a number to a string representating roman numeral.
 fn num_as_roman(num: i32) -> String {
-    todo!();
+    if num > 3999 {
+        format!(
+            "Your number: {} is to big. Max representable number is 3999!",
+            num
+        )
+    } else {
+        "yayo".to_string()
+    }
 }
 
 #[cfg(test)]
