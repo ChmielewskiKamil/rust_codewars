@@ -1,15 +1,24 @@
-use std::iter::Map;
-
 fn to_camel_case(text: &str) -> String {
-    if text.contains("-") {
-        text.replace("-", "")
-    } else if text.contains("_") {
-        text.replace("_", "")
-    } else {
-        text.to_string()
-    }
-}
+    let mut capitalize_next = false;
 
+    text.chars()
+        .map(|c| {
+            let camel_cased_result = if capitalize_next {
+                c.to_uppercase().next().unwrap()
+            } else {
+                c
+            };
+
+            match c {
+                '-' | '_' => capitalize_next = true,
+                _ => capitalize_next = false,
+            }
+
+            camel_cased_result
+        })
+        .filter(|c| *c != '-' && *c != '_')
+        .collect()
+}
 #[cfg(test)]
 mod tests {
     use super::*;
