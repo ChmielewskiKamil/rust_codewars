@@ -26,4 +26,12 @@ mod tests {
     fn it_removes_dashes() {
         assert_eq!(to_camel_case("Remove-Dashes-Here"), "RemoveDashesHere");
     }
+
+    #[test]
+    fn it_removes_underscores() {
+        assert_eq!(
+            to_camel_case("Remove_Underscores_Here"),
+            "RemoveUnderscoresHere"
+        );
+    }
 }
