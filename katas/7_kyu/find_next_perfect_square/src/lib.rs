@@ -22,10 +22,20 @@ mod tests {
         assert!(true);
     }
 
+    /* //////////////////////////////////////////
+                find_next_square tests
+       /////////////////////////////////////////
+    */
+
     #[test]
     fn it_finds_4_for_2() {
         assert_eq!(find_next_square(2), Some(4));
     }
+
+    /* //////////////////////////////////////////
+                is_perfect tests
+       /////////////////////////////////////////
+    */
 
     #[test]
     fn it_knows_if_4_is_perfect() {
@@ -35,5 +45,10 @@ mod tests {
     #[test]
     fn it_knows_if_5_is_perfect() {
         assert_eq!(is_perfect(5), false);
+    }
+
+    #[test]
+    fn it_knows_if_121_is_perfect() {
+        assert_eq!(is_perfect(121), true);
     }
 }
