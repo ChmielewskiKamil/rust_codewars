@@ -9,7 +9,7 @@ fn num_as_roman(num: i32) -> String {
         "yayo".to_string()
     }
 }
-
+#[allow(non_snake_case)]
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -25,5 +25,10 @@ mod tests {
             num_as_roman(4000),
             "Your number: 4000 is to big. Max representable number is 3999!"
         )
+    }
+
+    #[test]
+    fn it_should_encode_1_to_I() {
+        assert_eq!(num_as_roman(1), "I");
     }
 }
