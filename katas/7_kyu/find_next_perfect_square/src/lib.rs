@@ -32,6 +32,11 @@ mod tests {
         assert_eq!(find_next_square(2), Some(4));
     }
 
+    #[test]
+    fn it_finds_9_for_4() {
+        assert_eq!(find_next_square(4), Some(9));
+    }
+
     /* //////////////////////////////////////////
                 is_perfect tests
        /////////////////////////////////////////
