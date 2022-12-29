@@ -53,4 +53,12 @@ mod tests {
             "ItCapitalizesLetters"
         );
     }
+
+    #[test]
+    fn it_capitalizes_letters_after_underscore() {
+        assert_eq!(
+            to_camel_case("It_capitalizes_letters"),
+            "ItCapitalizesLetters"
+        );
+    }
 }
