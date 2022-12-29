@@ -3,6 +3,8 @@ use std::iter::Map;
 fn to_camel_case(text: &str) -> String {
     if text.contains("-") {
         text.replace("-", "")
+    } else if text.contains("_") {
+        text.replace("_", "")
     } else {
         text.to_string()
     }
