@@ -1,16 +1,23 @@
 fn find_next_square(sq: u64) -> Option<u64> {
-    if !is_perfect(sq) {
-        return None;
+    let square_root = (sq as f64).sqrt();
+    if square_root.floor() == square_root {
+        return Some(((square_root as u64) + 1).pow(2));
+    } else {
+        None
     }
 
-    let mut square_to_test = sq + 1;
-    loop {
-        if is_perfect(square_to_test) {
-            return Some(square_to_test);
-        } else {
-            square_to_test += 1;
-        }
-    }
+    // if !is_perfect(sq) {
+    //     return None;
+    // }
+
+    // let mut square_to_test = sq + 1;
+    // loop {
+    //     if is_perfect(square_to_test) {
+    //         return Some(square_to_test);
+    //     } else {
+    //         square_to_test += 1;
+    //     }
+    // }
 }
 
 fn is_perfect(sq: u64) -> bool {
