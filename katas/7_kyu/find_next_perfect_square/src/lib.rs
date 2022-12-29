@@ -2,7 +2,6 @@ fn find_next_square(sq: u64) -> Option<u64> {
     let mut square_to_test = sq + 1;
     loop {
         if is_perfect(square_to_test) {
-            // found = true;
             return Some(square_to_test);
         } else {
             square_to_test += 1;
