@@ -3,7 +3,14 @@ fn find_next_square(sq: u64) -> Option<u64> {
 }
 
 fn is_perfect(sq: u64) -> bool {
-    true
+    let sqrt = (sq as f64).sqrt();
+    let uint_sqrt = sqrt as u64;
+
+    if uint_sqrt * uint_sqrt == sq {
+        true
+    } else {
+        false
+    }
 }
 
 #[cfg(test)]
