@@ -46,6 +46,11 @@ mod tests {
         assert_eq!(find_next_square(4), Some(9));
     }
 
+    #[test]
+    fn it_finds_676_for_625() {
+        assert_eq!(find_next_square(625), Some(676))
+    }
+
     /* //////////////////////////////////////////
                 is_perfect tests
        /////////////////////////////////////////
