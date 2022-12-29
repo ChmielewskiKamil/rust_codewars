@@ -1,5 +1,11 @@
+use std::iter::Map;
+
 fn to_camel_case(text: &str) -> String {
-    text.to_string()
+    if text.contains("-") {
+        text.replace("-", "")
+    } else {
+        text.to_string()
+    }
 }
 
 #[cfg(test)]
