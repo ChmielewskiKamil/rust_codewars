@@ -21,7 +21,12 @@ mod tests {
     }
 
     #[test]
-    fn it_knows_if_4x4_is_perfect() {
+    fn it_knows_if_4_is_perfect() {
         assert_eq!(is_perfect(4), true);
+    }
+
+    #[test]
+    fn it_knows_if_5_is_perfect() {
+        assert_eq!(is_perfect(5), false);
     }
 }
