@@ -1,5 +1,5 @@
 fn to_camel_case(text: &str) -> String {
-    todo!()
+    text.to_string()
 }
 
 #[cfg(test)]
