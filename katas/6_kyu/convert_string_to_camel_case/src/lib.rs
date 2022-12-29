@@ -36,4 +36,12 @@ mod tests {
             "RemoveUnderscoresHere"
         );
     }
+
+    #[test]
+    fn it_capitalizes_letters_after_dash() {
+        assert_eq!(
+            to_camel_case("It-capitalizes-letters"),
+            "ItCapitalizesLetters"
+        );
+    }
 }
