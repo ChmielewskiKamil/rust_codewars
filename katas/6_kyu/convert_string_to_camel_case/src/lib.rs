@@ -15,4 +15,9 @@ mod tests {
     fn it_does_not_modify_input_if_already_camel_case() {
         assert_eq!(to_camel_case("DoNotModifyThat"), "DoNotModifyThat");
     }
+
+    #[test]
+    fn it_removes_dashes() {
+        assert_eq!(to_camel_case("Remove-Dashes-Here"), "RemoveDashesHere");
+    }
 }
