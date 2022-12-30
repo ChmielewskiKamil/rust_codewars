@@ -116,4 +116,9 @@ mod tests {
     fn it_should_encode_100_to_C() {
         assert_eq!(num_as_roman(100), "C");
     }
+
+    #[test]
+    fn it_should_encode_400_to_CD() {
+        assert_eq!(num_as_roman(400), "CD");
+    }
 }
