@@ -47,8 +47,6 @@ fn num_as_roman(mut num: i32) -> String {
 #[allow(non_snake_case)]
 #[cfg(test)]
 mod tests {
-    use core::num;
-
     use super::*;
 
     #[test]
