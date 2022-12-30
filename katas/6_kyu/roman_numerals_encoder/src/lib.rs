@@ -80,4 +80,9 @@ mod tests {
     fn it_should_encode_11_to_XI() {
         assert_eq!(num_as_roman(11), "XI");
     }
+
+    #[test]
+    fn it_should_encode_40_to_XL() {
+        assert_eq!(num_as_roman(40), "XL");
+    }
 }
