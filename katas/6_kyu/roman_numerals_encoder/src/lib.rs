@@ -100,4 +100,9 @@ mod tests {
     fn it_should_encode_50_to_L() {
         assert_eq!(num_as_roman(50), "L");
     }
+
+    #[test]
+    fn it_should_encode_90_to_XC() {
+        assert_eq!(num_as_roman(90), "XC");
+    }
 }
