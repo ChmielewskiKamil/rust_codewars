@@ -35,6 +35,8 @@ fn num_as_roman(mut num: i32) -> String {
 #[allow(non_snake_case)]
 #[cfg(test)]
 mod tests {
+    use core::num;
+
     use super::*;
 
     #[test]
@@ -88,5 +90,10 @@ mod tests {
     #[test]
     fn it_should_encode_40_to_XL() {
         assert_eq!(num_as_roman(40), "XL");
+    }
+
+    #[test]
+    fn it_should_encode_50_to_L() {
+        assert_eq!(num_as_roman(50), "L");
     }
 }
