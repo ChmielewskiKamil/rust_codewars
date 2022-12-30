@@ -75,4 +75,9 @@ mod tests {
     fn it_should_encode_10_to_X() {
         assert_eq!(num_as_roman(10), "X");
     }
+
+    #[test]
+    fn it_should_encode_11_to_XI() {
+        assert_eq!(num_as_roman(11), "XI");
+    }
 }
