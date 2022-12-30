@@ -134,4 +134,9 @@ mod tests {
     fn it_should_encode_500_to_D() {
         assert_eq!(num_as_roman(500), "D");
     }
+
+    #[test]
+    fn it_should_encode_900_to_CM() {
+        assert_eq!(num_as_roman(900), "CM");
+    }
 }
