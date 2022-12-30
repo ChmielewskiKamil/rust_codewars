@@ -1,13 +1,16 @@
 /// Converts a number to a string representating roman numeral.
-fn num_as_roman(num: i32) -> String {
-    if num > 3999 {
-        format!(
-            "Your number: {} is to big. Max representable number is 3999!",
-            num
-        )
-    } else {
-        "I".to_string()
+fn num_as_roman(mut num: i32) -> String {
+    let mut roman_number = String::new();
+    while num > 0 {
+        match num {
+            n if n <= 3 => {
+                roman_number.push_str("I");
+                num -= 1;
+            }
+            _ => break,
+        };
     }
+    roman_number
 }
 #[allow(non_snake_case)]
 #[cfg(test)]
@@ -30,5 +33,10 @@ mod tests {
     #[test]
     fn it_should_encode_1_to_I() {
         assert_eq!(num_as_roman(1), "I");
+    }
+
+    #[test]
+    fn it_should_encode_2_to_II() {
+        assert_eq!(num_as_roman(2), "II");
     }
 }
