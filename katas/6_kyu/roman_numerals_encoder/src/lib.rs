@@ -1,6 +1,13 @@
 /// Converts a number to a string representating roman numeral.
 fn num_as_roman(mut num: i32) -> String {
     let mut roman_number = String::new();
+    if num > 3999 {
+        return format!(
+            "Your number: {} is to big. Max representable number is 3999!",
+            num
+        );
+    }
+
     while num > 0 {
         match num {
             n if n >= 1000 => {
