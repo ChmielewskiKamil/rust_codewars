@@ -57,4 +57,9 @@ mod tests {
     fn it_should_encode_5_to_V() {
         assert_eq!(num_as_roman(5), "V");
     }
+
+    #[test]
+    fn it_should_encode_9_to_IX() {
+        assert_eq!(num_as_roman(9), "IX");
+    }
 }
