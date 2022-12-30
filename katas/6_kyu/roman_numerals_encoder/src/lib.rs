@@ -3,6 +3,10 @@ fn num_as_roman(mut num: i32) -> String {
     let mut roman_number = String::new();
     while num > 0 {
         match num {
+            n if n >= 9 => {
+                roman_number.push_str("IX");
+                num -= 9;
+            }
             n if n >= 5 => {
                 roman_number.push_str("V");
                 num -= 5;
