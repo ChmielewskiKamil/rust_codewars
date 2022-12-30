@@ -3,6 +3,10 @@ fn num_as_roman(mut num: i32) -> String {
     let mut roman_number = String::new();
     while num > 0 {
         match num {
+            n if n >= 1000 => {
+                roman_number.push_str("M");
+                num -= 1000;
+            }
             n if n >= 900 => {
                 roman_number.push_str("CM");
                 num -= 900;
