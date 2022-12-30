@@ -8,7 +8,7 @@ fn num_as_roman(num: i32) -> String {
             num
         );
     }
-    /// Array of tuples (roman, value)
+    // Array of tuples (roman, value)
     let numerals = [
         ("M", 1000),
         ("CM", 900),
