@@ -39,4 +39,9 @@ mod tests {
     fn it_should_encode_2_to_II() {
         assert_eq!(num_as_roman(2), "II");
     }
+
+    #[test]
+    fn it_should_encode_4_to_IV() {
+        assert_eq!(num_as_roman(4), "IV");
+    }
 }
