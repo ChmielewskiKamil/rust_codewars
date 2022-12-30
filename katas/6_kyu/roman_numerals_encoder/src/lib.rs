@@ -1,6 +1,7 @@
 /// Converts a number to a string representating roman numeral.
-fn num_as_roman(mut num: i32) -> String {
+fn num_as_roman(num: i32) -> String {
     let mut roman_number = String::new();
+    let mut num = num;
     if num > 3999 {
         return format!(
             "Your number: {} is to big. Max representable number is 3999!",
@@ -24,64 +25,73 @@ fn num_as_roman(mut num: i32) -> String {
         ("I", 1),
     ];
 
-    while num > 0 {
-        match num {
-            n if n >= 1000 => {
-                roman_number.push_str("M");
-                num -= 1000;
-            }
-            n if n >= 900 => {
-                roman_number.push_str("CM");
-                num -= 900;
-            }
-            n if n >= 500 => {
-                roman_number.push_str("D");
-                num -= 500;
-            }
-            n if n >= 400 => {
-                roman_number.push_str("CD");
-                num -= 400;
-            }
-            n if n >= 100 => {
-                roman_number.push_str("C");
-                num -= 100;
-            }
-            n if n >= 90 => {
-                roman_number.push_str("XC");
-                num -= 90;
-            }
-            n if n >= 50 => {
-                roman_number.push_str("L");
-                num -= 50;
-            }
-            n if n >= 40 => {
-                roman_number.push_str("XL");
-                num -= 40;
-            }
-            n if n >= 10 => {
-                roman_number.push_str("X");
-                num -= 10;
-            }
-            n if n >= 9 => {
-                roman_number.push_str("IX");
-                num -= 9;
-            }
-            n if n >= 5 => {
-                roman_number.push_str("V");
-                num -= 5;
-            }
-            n if n >= 4 => {
-                roman_number.push_str("IV");
-                num -= 4;
-            }
-            n if n >= 1 => {
-                roman_number.push_str("I");
-                num -= 1;
-            }
-            _ => break,
-        };
+    for &(symbol, value) in numerals.iter() {
+        while num >= value {
+            roman_number.push_str(symbol);
+            num -= value;
+        }
     }
+
     roman_number
+
+    // while num > 0 {
+    //     match num {
+    //         n if n >= 1000 => {
+    //             roman_number.push_str("M");
+    //             num -= 1000;
+    //         }
+    //         n if n >= 900 => {
+    //             roman_number.push_str("CM");
+    //             num -= 900;
+    //         }
+    //         n if n >= 500 => {
+    //             roman_number.push_str("D");
+    //             num -= 500;
+    //         }
+    //         n if n >= 400 => {
+    //             roman_number.push_str("CD");
+    //             num -= 400;
+    //         }
+    //         n if n >= 100 => {
+    //             roman_number.push_str("C");
+    //             num -= 100;
+    //         }
+    //         n if n >= 90 => {
+    //             roman_number.push_str("XC");
+    //             num -= 90;
+    //         }
+    //         n if n >= 50 => {
+    //             roman_number.push_str("L");
+    //             num -= 50;
+    //         }
+    //         n if n >= 40 => {
+    //             roman_number.push_str("XL");
+    //             num -= 40;
+    //         }
+    //         n if n >= 10 => {
+    //             roman_number.push_str("X");
+    //             num -= 10;
+    //         }
+    //         n if n >= 9 => {
+    //             roman_number.push_str("IX");
+    //             num -= 9;
+    //         }
+    //         n if n >= 5 => {
+    //             roman_number.push_str("V");
+    //             num -= 5;
+    //         }
+    //         n if n >= 4 => {
+    //             roman_number.push_str("IV");
+    //             num -= 4;
+    //         }
+    //         n if n >= 1 => {
+    //             roman_number.push_str("I");
+    //             num -= 1;
+    //         }
+    //         _ => break,
+    //     };
+    // }
+    // roman_number
 }
 #[allow(non_snake_case)]
 #[cfg(test)]
