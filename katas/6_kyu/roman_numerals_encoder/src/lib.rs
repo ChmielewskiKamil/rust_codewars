@@ -48,4 +48,9 @@ mod tests {
     fn it_should_encode_4_to_IV() {
         assert_eq!(num_as_roman(4), "IV");
     }
+
+    #[test]
+    fn it_should_encode_5_to_V() {
+        assert_eq!(num_as_roman(5), "V");
+    }
 }
