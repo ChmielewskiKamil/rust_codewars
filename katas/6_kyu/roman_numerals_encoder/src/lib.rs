@@ -66,4 +66,9 @@ mod tests {
     fn it_should_encode_9_to_IX() {
         assert_eq!(num_as_roman(9), "IX");
     }
+
+    #[test]
+    fn it_should_encode_10_to_X() {
+        assert_eq!(num_as_roman(10), "X");
+    }
 }
